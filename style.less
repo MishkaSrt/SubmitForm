@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.error{
+    color: #ff0000;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+@backgroundColor: #353535;
+@formBackground: #525252;
+@textColor: #fff;
+@transition: all ease 0.4s;
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: @backgroundColor;
+    overflow: hidden;
+}
+.formDiv{
+    background-color: @formBackground;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    margin: 200px auto;
+    border-radius: 10px;
+    resize: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    height: fit-content;
+    margin: 40px 0;
+    color: @textColor;
+
+}
+
+.signup{
+    font-size: 25px;
+    margin: 0 0 20px 85px;
+}
+#submit{
+    background-color: #f68424;
+    border: none;
+    transition: @transition;
+
+    width: 150px;
+    height: 40px;
+    color: @textColor;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #f57911;
+        transform: scale(1.2);
+
+    }
+}
+
+.view{
+    margin: 0 auto;
+    border: none;
+    transition: @transition;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #f68424;
+    color: @textColor;
+    cursor: pointer;
+    &:hover{
+        background-color: #f57911;
+        transform: scale(1.2);
+
+    }
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    font-size: 14px;
+    border: none;
+    margin: 5px 0;
+    transition: @transition;
+    &:hover{
+        border: 1px solid #f57911;
+    }
+}
+.dataInserted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
