@@ -42,7 +42,8 @@ class DbConnect{
                         echo "Error in query";
                     }
                 }else{
-                    echo 'All fields are required';
+                    // echo 'All fields are required';
+                    
                 }
             }
         }
