@@ -44,13 +44,17 @@ function test_input($data){
     <link rel="stylesheet/less" type="text/css" href="style.less" />
     <link rel="stylesheet/less" type="text/css" href="responsive.less" />
     <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
     <script src="script.js"></script>
     <title>Sign Up </title>
 </head>
 <body>
+    <div>
+        <div id="message"></div>
+    </div>
 <div class="formDiv">
-        <form action="" method="post" class="form" id="form">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form" id="form">
             <p class="signup">Sign Up</p>
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" placeholder="Enter your name">

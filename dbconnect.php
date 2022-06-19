@@ -19,28 +19,33 @@ class DbConnect{
             echo "Connection error ". $e.getMessage();
         }
     }
-
-
+    
     public function insert(){
+
         if(isset($_POST['submit'])){
-            
+            if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email'])){
+                if(!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
+                    $fname = $_POST['firstname'];
+                    $lname = $_POST['lastname'];
+                    $email = $_POST['email'];
 
-            $fname = $_POST["fname"];
-            $lname = $_POST["lname"];
-            $email = $_POST["email"];
-            if(empty($fname) || (empty($lname) || (empty($email)))){
-                return 'Please fill in the blanks';
-            } else{
-                $sql = "INSERT INTO `users` (`fname`, `lname`, `email`) VALUES (:fname, :lname, :email)";
-                $res = $this->connection->prepare($sql);
-                $exec = $res->execute(array(":fname"=>$fname, ":lname"=>$lname, ":email"=>$email));
+                    $query = 'INSERT INTO users (fname, lname, email) VALUES (:fname, :lname, :email)';
+                    $res = $this->connection->prepare($query);
+                    $exec = $res->execute(array(":fname"=>$fname,":lname"=>$lname, ":email"=>$email));
 
-                if($exec){
-                    echo "<div> Data inserted </div>";
+                    try {
+                        if($exec){
+                            $result = $res->fetchAll();
+                            echo 'Data inserted';
+                        }
+                    } catch (Exception $e)  {
+                        echo "Error in query";
+                    }
+                }else{
+                    echo 'All fields are required';
                 }
-
             }
-    }
+        }
 
 }
 

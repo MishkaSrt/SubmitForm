@@ -5,6 +5,7 @@ $object = new DbConnect();
 
 $rows = $object->fetchData();
 
+
 ?>
 
 <!DOCTYPE html>
