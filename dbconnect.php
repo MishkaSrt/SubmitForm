@@ -49,7 +49,6 @@ class DbConnect{
         }
 
 }
-
     public function fetchData(){
         $data = null;
 
