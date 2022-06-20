@@ -58,13 +58,13 @@ function test_input($data){
             <p class="signup">Sign Up</p>
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" placeholder="Enter your name">
-            <!-- <span class="error">*<?php echo $fnameErr; ?></span> -->
+            <span class="error">*<?php echo $fnameErr; ?></span>
             <label for="lname">Last Name</label>
             <input type="text" name="lname" id="lname" placeholder="Enter your surname">
-            <!-- <span class="error">*<?php echo $lnameErr; ?></span> -->
+            <span class="error">*<?php echo $lnameErr; ?></span>
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="Enter your email">
-            <!-- <span class="error">*<?php echo $emailErr; ?></span> -->
+            <span class="error">*<?php echo $emailErr; ?></span>
             <button type="submit" id="submit" name="submit">Send</button>
             <button ><a href="view.php" >See List</a></button>
 
