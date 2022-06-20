@@ -3,35 +3,35 @@ include 'create.php';
 
 // Input validation section
 
-$fname = $lname = $email = "";
-$fnameErr = $lnameErr = $emailErr = "";
+// $fname = $lname = $email = "";
+// $fnameErr = $lnameErr = $emailErr = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    if(empty($_POST["firstname"])){
-        $fnameErr = "Name is required";
-    } else{
-        $fname = test_input($_POST["firstname"]);
-    }
+// if($_SERVER["REQUEST_METHOD"] == "POST"){
+//     if(empty($_POST["firstname"])){
+//         $fnameErr = "Name is required";
+//     } else{
+//         $fname = test_input($_POST["firstname"]);
+//     }
 
-    if(empty($_POST["lastname"])){
-        $lnameErr = "Surname is required";
-    }else{
-        $lname = test_input($_POST["lastname"]);
-    }
+//     if(empty($_POST["lastname"])){
+//         $lnameErr = "Surname is required";
+//     }else{
+//         $lname = test_input($_POST["lastname"]);
+//     }
 
-    if(empty($_POST["email"])){
-        $emailErr = "Email is required";
-    } else{
-        $email = test_input($_POST["email"]);
-    }
-}
+//     if(empty($_POST["email"])){
+//         $emailErr = "Email is required";
+//     } else{
+//         $email = test_input($_POST["email"]);
+//     }
+// }
 
-function test_input($data){
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+// function test_input($data){
+//     $data = trim($data);
+//     $data = stripslashes($data);
+//     $data = htmlspecialchars($data);
+//     return $data;
+// }
 
 ?>
 
@@ -53,18 +53,20 @@ function test_input($data){
     <div>
         <div id="message"></div>
     </div>
+
+
 <div class="formDiv">
         <form action="" method="post" class="form" id="form">
             <p class="signup">Sign Up</p>
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" placeholder="Enter your name">
-            <span class="error">*<?php echo $fnameErr; ?></span>
+            <!-- <span class="error">*<?php echo $fnameErr; ?></span> -->
             <label for="lname">Last Name</label>
             <input type="text" name="lname" id="lname" placeholder="Enter your surname">
-            <span class="error">*<?php echo $lnameErr; ?></span>
+            <!-- <span class="error">*<?php echo $lnameErr; ?></span> -->
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="Enter your email">
-            <span class="error">*<?php echo $emailErr; ?></span>
+            <!-- <span class="error">*<?php echo $emailErr; ?></span> -->
             <button type="submit" id="submit" name="submit">Send</button>
             <button ><a href="view.php" >See List</a></button>
 
