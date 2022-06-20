@@ -20,7 +20,7 @@ $(document).ready(function (){
                 $('#message').html(response)
             }
         });
-
+        
         $('#form')[0].reset();
     });
 });
